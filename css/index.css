@@ -16,15 +16,17 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  place-content: center ;
-  height: 100vh;
-  width: 100vw;
+  place-items: center ;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 100px 1fr 1fr;
-  gap: 15px;
+  max-width: 70%;
+  height: 100%;
+  grid-template-rows: minmax(70px,90px) 1fr minmax(80px, 100px);
+  gap: 5px;
 }
 
 .container__heading {
@@ -34,11 +36,25 @@ body {
 
 .container__text {
   width: 70%;
+  padding: 10px;
+  margin: 10px;
   height: max-content;
   justify-self: center;
   align-self: center;
   text-align: justify;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.pink {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  color: black;
+}
+
+.purple {
+  background-color: var(--ternary-color);
+  border-radius: 20px;
+  color: white;
 }
 
 .container__btn {
